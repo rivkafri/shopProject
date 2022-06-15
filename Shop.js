@@ -1,3 +1,4 @@
+//shop project
 const Category = {
     food,
     clothes
