@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        body {
+            text-align: center;
+            font-family: "OpenSansHebrew", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: rgb(5, 129, 129);
+        }
+
+        .containerForm {
+            display: flex;
+            justify-content: center;
+            border: 2px black solid;
+            margin-bottom: 2%;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            padding-bottom: 2%;
+        }
+
+        .listProducts {
+            direction: rtl;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        #list {
+            border: 2px black solid;
+            padding: 1%;
+            margin-bottom: 5%;
+        }
+
+        #inputName {
+            display: block;
+        }
+
+        #searchName {
+            display: none;
+        }
+
+        .divButtons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            border: 2px black solid;
+            margin-bottom: 2%;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            padding-bottom: 3%;
+        }
+
+        .divAll {
+            display: flex;
+        }
+
+        #search {
+            border: 3px black solid;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerForm">
+        <form id="save" class="form">
+            <h2>new product</h2><br />
+            <label>enter code</label><input type="number" name="code" id="code" required><br />
+            <label>enter name</label><input type="text" name="name" id="name" required><br />
+            <label>enter category</label>
+            <select id="category" required>
+                <option value="food" id="food">food</option>
+                <option value="clothes" id="clothes">clothes</option>
+            </select><br />
+            <label>enter price</label><input type="number" name="price" id="price" required><br />
+            <label>enter amount</label><input type="number" name="amount" id="amount" required><br />
+            <button type="button" id="addbtn">add</button>
+            <button type="button" id="updatebtn">update</button>
+        </form>
+    </div>
+    <div class="divButtons">
+        <div class="buttons">
+            <h2>search</h2>
+            <button type="button" id="search">search</button><br />
+            <button type="button" id="searchByName">search ByName</button>
+            <input type="text" name="inputName" id="inputName" placeholder="nameProduct" required>
+            <button type="butonn" id="searchByRange">search ByRange</button>
+            <input type="number" id="min" placeholder="min" required>
+            <input type="number" id="max" placeholder="max" required>
+            <label>by category</label>
+            <select id="ByCategory">
+                <option name="not" value=""></option>
+                <option nana="food" value="food">food</option>
+                <option name="clothes" value="clothes">clothes</option>
+            </select>
+            <button type="button" id="searchByAmount">search ByAmount</button><br />
+            <button type="button" id="delProduct">delete</button>
+            <input type="number" id="inputDel" placeholder="ProductToDel" required>
+        </div>
+    </div>
+    <button type="button" id="list">the products</button>
+    <div id="listProducts" class="listProducts"></div>
+    <script src="Shop.js"></script>
+</body>
+
+</html>
